@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Steam Game</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background: #1b2838;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-container {
+            background: #2a475e;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            width: 350px;
+        }
+        .login-container img {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+        .login-container h1 {
+            color: #ffffff;
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+        .login-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #66c0f4;
+            border-radius: 5px;
+            background: #1b2838;
+            color: white;
+            font-size: 14px;
+        }
+        .password-container {
+            position: relative;
+        }
+        .toggle-password {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #66c0f4;
+        }
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background: #66c0f4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .login-container button:hover {
+            background: #4589b0;
+        }
+        .login-container a {
+            display: block;
+            margin-top: 10px;
+            color: #66c0f4;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .login-container a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<div class="login-container">
+    <img src="https://store.akamai.steamstatic.com/public/shared/images/header/logo_steam.svg?t=962016" alt="Steam Logo">
+    <h1>Iniciar sessão no Steam</h1>
+    <input type="text" placeholder="Nome de usuário" maxlength="20">
+    <div class="password-container">
+        <input type="password" id="password" placeholder="Senha" maxlength="20">
+        <span class="toggle-password" onclick="togglePassword()">👁️</span>
+    </div>
+    <button>Entrar</button>
+    <a href="#">Esqueceu sua senha?</a>
+</div>
+<script>
+    function togglePassword() {
+        var passwordInput = document.getElementById("password");
+        passwordInput.type = passwordInput.type === "password" ? "text" : "password";
+    }
+</script>
+</body>
+</html>
